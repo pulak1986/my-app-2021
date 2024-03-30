@@ -19,5 +19,9 @@ Welcome to Jenkins alerts
 Thanks and Regards
 Pulak kar''', cc: '', from: '', replyTo: '', subject: 'Jenkins Job', to: 'kar.pulakk@gmail.com'
   }
+  stage('Slack Notification')
+  {
+    slackSend baseUrl: 'https://hooks.slack.com/services/', channel: 'jenkins-pipeline', color: 'good', message: 'Welcome to Jenkins Slack', teamDomain: 'Academic', tokenCredentialId: 'slack-demo'
+  }
   
 }
