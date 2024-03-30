@@ -10,5 +10,14 @@ stage('Compile-Package'){
    sh "${mvnHome}/bin/mvn package"
 
     }
+  stage('Email Notification'){
+        
+       mail bcc: '', body: '''Hi,
+
+Welcome to Jenkins alerts
+
+Thanks and Regards
+Pulak kar''', cc: '', from: '', replyTo: '', subject: 'Jenkins Job', to: 'kar.pulakk@gmail.com'
+  }
   
 }
