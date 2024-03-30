@@ -3,7 +3,7 @@ pipeline {
   agent {
     label 'Linux-Slave-01'
   }
-  
+stages{ 
 stage('SCM Checkout')
   {
   git 'https://github.com/pulak1986/my-app-2021'
@@ -27,5 +27,5 @@ Pulak kar''', cc: '', from: '', replyTo: '', subject: 'Jenkins Job', to: 'kar.pu
   {
     slackSend baseUrl: 'https://hooks.slack.com/services/', channel: 'jenkins-pipeline', color: 'good', message: 'Welcome to Jenkins Slack', teamDomain: 'Academic', tokenCredentialId: 'slack-demo'
   }
-  
+}
 }
