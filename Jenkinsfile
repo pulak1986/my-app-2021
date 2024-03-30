@@ -1,4 +1,8 @@
-node{
+pipeline {
+
+  agent {
+    label 'Linux-Slave-01'
+  }
   
 stage('SCM Checkout')
   {
