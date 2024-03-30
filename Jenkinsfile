@@ -14,9 +14,12 @@ stage('Compile-Package'){
 
   steps
   {
-
+  step {
   def mvnHome = tool name: 'maven-3', type: 'maven'
+  }
+    step {
    sh "${mvnHome}/bin/mvn package"
+    }
   }
     }
   stage('Email Notification'){
