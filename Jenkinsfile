@@ -1,4 +1,4 @@
-properties([parameters([choice(choices: ['master\nfeature1\nfeature2'], description: 'Choose a Git branch to pull the code', name: 'branch')])])
+properties([parameters([choice(choices: 'master\nfeature-1\nfeature-2', description: 'Choose a Git branch to pull the code', name: 'branch')])])
 
 node (label: 'Linux-Slave-01') {
    
